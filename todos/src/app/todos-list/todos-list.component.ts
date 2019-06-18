@@ -5,7 +5,7 @@ import { Todo } from '../todo.interface';
   selector: 'app-todos-list',
   template: `
     <ul>
-      <li *ngFor="let todo of todos; index as i">
+      <li *ngFor="let todo of todos; index as i" [style.text-decoration]= "todo.completed ? 'line-through' : 'none'">
         <input type="checkbox" [checked]="todo.completed" (click)="toggle(i)">
         {{todo.content}}
         <button (click)="deleteTodo(todo.id)">X</button>
