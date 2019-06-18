@@ -13,6 +13,7 @@ export class InputComponent {
   @Output() add = new EventEmitter();
 
   addTodo(input:HTMLInputElement) {
+    if(!input.value.trim())  return;
     this.add.emit(input.value);
     input.value = '';
   }

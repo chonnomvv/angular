@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Todo } from '../todo.interface';
 
 @Component({
@@ -11,8 +11,6 @@ import { Todo } from '../todo.interface';
   styles: []
 })
 export class TodosComponent {
-
-  // @Output() todos = this.todos:Todo[];
 
   @Input() add:string;
   @Input() toggleTodo:number;
